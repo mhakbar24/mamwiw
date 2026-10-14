@@ -1,2 +1,9 @@
 RewriteEngine On
 RewriteRule ^mamwiw/(.*)$ /$1 [R=302,L]
+
+# Blokir unduhan konfigurasi dan dump database dari document root.
+<FilesMatch "(?i)(\.(sql|lock|md)$|^composer\.json$|^Procfile$|^\.env.*$)">
+    Require all denied
+</FilesMatch>
+
+RewriteRule ^(?:\.git|vendor)(?:/|$) - [F,L]
