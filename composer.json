@@ -1,0 +1,9 @@
+{
+  "name": "mamwiw/inventory-app",
+  "description": "Mamwiw inventory management PHP application.",
+  "license": "proprietary",
+  "require": {
+    "php": "^8.3",
+    "ext-mysqli": "*"
+  }
+}
